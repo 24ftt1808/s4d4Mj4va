@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class SpeedTest2 {   
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double num1;
+        double num2;
+
+
+        System.out.print("Enter the first number: ");
+        num1 = input.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        num2 = input.nextDouble();
+
+        if(num2 <= 0){
+            
+            System.out.println("Here is the menu: \n1.Add \n2.Substract \n3.Multiply");
+            input.nextLine();
+            System.out.print("Enter your choice: ");
+            String choice = input.nextLine().toLowerCase();
+
+            if(choice.equals("add")){
+                System.out.println("The result is: " + (num1 + num2));
+            }else if(choice.equals("substract")){
+                System.out.println("The result is: " + (num1 - num2));
+            }else if(choice.equals("multiply")){
+                System.out.println("The result is: " + (num1 * num2));
+            }else{
+                System.out.println("Invalid choice");
+               
+            }
+
+        }
+        if(num2 > 0){
+            System.out.println("Here is the menu: \n1.Add \n2.Subtract \n3.Multiply\n4.Divide");
+            input.nextLine();
+            System.out.print("Enter your choice: ");
+            String choice = input.nextLine();
+
+            if(choice.equals("add")){
+                System.out.println("The result is: " + (num1 + num2));
+            }else if(choice.equals("subtract")){
+                System.out.println("The result is: " + (num1 - num2));
+            }else if(choice.equals("multiply")){
+                System.out.println("The result is: " + (num1 * num2));
+            }else if(choice.equals("divide")){
+                System.out.println("The result is: " + (num1 / num2));
+            }else{
+                System.out.println("invalid choice!");
+            }//aku buat sendiri sir:) alhamdulillah
+        }
+    }
+    
+}
