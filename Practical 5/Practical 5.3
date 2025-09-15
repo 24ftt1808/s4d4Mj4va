@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ReplaceSubString {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String message;
+        String replace;
+        String replacement;
+        String updatedMessage;
+
+        System.out.print("Enter your message: ");
+        message = input.nextLine();
+
+        System.out.print("Enter the substring to replace: ");
+        replace = input.nextLine();
+
+        System.out.print("Enter the replacement substring: ");
+        replacement = input.nextLine();
+
+        updatedMessage  = message.replace(replace,replacement);
+
+        System.out.println("\nUpdated message is: " + updatedMessage);
+        
+
+
+
+        input.close();
+    }
+    
+}
