@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class AddFourNumbers {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int num1 = (int)(Math.random() * 100);//this is how to generate random nums
+        int num2 = (int)(Math.random() * 100);
+        int num3 = (int)(Math.random() * 100);
+        int num4 = (int)(Math.random() * 100);
+
+        int totalSum = num1 + num2 + num3 + num4;
+
+        System.out.print("What is the sum of " + num1 + " + " + num2 + " + " + num3 + " + " + num4 + " = ");
+        int answer = input.nextInt();
+
+        if(totalSum == answer){
+            System.out.println("Good job! that is correct!");
+        }
+        else{
+            System.out.println("Sorry that is incorrect, the correct answer is " + totalSum);
+        }
+
+        input.close();
+    }
+    
+}
