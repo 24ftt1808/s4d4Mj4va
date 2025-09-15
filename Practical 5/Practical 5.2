@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Reverse5Letters {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String word;
+        String reverseWord;
+
+        System.out.print("Enter 5 word: ");
+        word = input.nextLine();
+
+        if(word.length() != 5){
+            System.out.println("Error! please enter exactly 5 word!");
+        }
+        else{
+            reverseWord = "";
+
+            reverseWord = reverseWord + word.charAt(4);
+            reverseWord = reverseWord + word.charAt(3);
+            reverseWord = reverseWord + word.charAt(2);
+            reverseWord = reverseWord + word.charAt(1);
+            reverseWord = reverseWord + word.charAt(0);
+
+            System.out.println("The reversed word of " + word + " is " + reverseWord);
+        }
+
+        input.close();
+    }
+    
+}
