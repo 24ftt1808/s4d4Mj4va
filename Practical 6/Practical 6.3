@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+public class SimpleLoginValidation {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String username = "Ahmad Ali";
+        int password = 12345;
+
+        LocalTime ld = LocalTime.now();
+
+        DateTimeFormatter dtf = DateTimeFormatter .ofPattern("HH:mm:ss");
+        String ldString = ld.format(dtf); 
+
+        System.out.print("Please enter your username: ");
+        String username1 = input.nextLine();
+
+        System.out.print("Please enter the password: ");
+        int password1 = input.nextInt();
+
+        if(!username1.equals(username)){
+            System.out.println("Error: Invalid Username!");
+        }if(password != password1){
+            System.out.println("Error: Password does not match!");
+        }
+        else if(username1.equals(username) && password == password1){
+            System.out.println("Welcome " + username1 + ". " + "The time is now " + ldString);
+        }
+        
+
+
+
+        
+
+
+
+
+
+        input.close();
+    }
+    
+}
