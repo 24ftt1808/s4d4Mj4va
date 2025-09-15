@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class RockPaperScissor {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Generate random number (0, 1, or 2)
+        int computerChoice = (int)(Math.random() * 1000) % 3;
+        
+        System.out.print("Enter rock (0), paper (1), scissor (2): ");
+        int userChoice = input.nextInt();
+        
+        String computerWord = "";
+        if (computerChoice == 0) computerWord = "rock";
+        if (computerChoice == 1) computerWord = "paper";
+        if (computerChoice == 2) computerWord = "scissor";
+        
+       
+        String userWord = "";
+        if (userChoice == 0) userWord = "rock";
+        if (userChoice == 1) userWord = "paper";
+        if (userChoice == 2) userWord = "scissor";
+        
+        System.out.print("The computer is " + computerWord + ". You are " + userWord + ". ");
+                        
+        
+        
+        if (computerChoice == 0 && userChoice == 0) {
+            System.out.println("It is a draw.");
+        }
+        if (computerChoice == 0 && userChoice == 1) {
+            System.out.println("You win.");
+        }
+        if (computerChoice == 0 && userChoice == 2) {
+            System.out.println("You lose.");
+        }
+        if (computerChoice == 1 && userChoice == 0) {
+            System.out.println("You lose.");
+        }
+        if (computerChoice == 1 && userChoice == 1) {
+            System.out.println("It is a draw.");
+        }
+        if (computerChoice == 1 && userChoice == 2) {
+            System.out.println("You win.");
+        }
+        if (computerChoice == 2 && userChoice == 0) {
+            System.out.println("You win.");
+        }
+        if (computerChoice == 2 && userChoice == 1) {
+            System.out.println("You lose.");
+        }
+        if (computerChoice == 2 && userChoice == 2) {
+            System.out.println("It is a draw.");
+        }
+        
+        input.close();
+    }
+}
