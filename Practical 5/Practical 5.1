@@ -1,0 +1,28 @@
+mport java.util.Scanner;
+
+public class WordComparison {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String word1;
+        String word2;
+
+        System.out.print("Enter the first word: ");
+        word1 = input.nextLine();
+
+        System.out.print("Enter the second word: ");
+        word2 = input.nextLine();
+
+        if(word1.equalsIgnoreCase(word2)){
+            System.out.println("Are both words the same?: true");
+        }
+        else{
+            System.out.println("Are the both words the same?: false");
+        }
+
+
+
+
+    }
+    
+}
