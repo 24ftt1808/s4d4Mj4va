@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class RockPaperScissorLoop {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String playOrNot;
+        int rounds = 0;
+        int playerScore = 0;
+        int CpuScore = 0;
+        
+        do{
+             int computerChoice = (int)(Math.random() * 1000) % 3;
+        
+        System.out.print("Enter rock (0), paper (1), scissor (2): ");
+        int userChoice = input.nextInt();
+        
+        String computerWord = "";
+        if (computerChoice == 0) computerWord = "rock";
+        if (computerChoice == 1) computerWord = "paper";
+        if (computerChoice == 2) computerWord = "scissor";
+        
+       
+        String userWord = "";
+        if (userChoice == 0) userWord = "rock";
+        if (userChoice == 1) userWord = "paper";
+        if (userChoice == 2) userWord = "scissor";
+        
+        System.out.print("The computer is " + computerWord + ". You are " + userWord + ". ");
+                        
+        if (computerChoice == 0 && userChoice == 0) {
+            System.out.println("It is a draw.");
+        }
+        if (computerChoice == 0 && userChoice == 1) {
+            System.out.println("You win.");
+            playerScore++;
+        }
+        if (computerChoice == 0 && userChoice == 2) {
+            System.out.println("You lose.");
+            CpuScore++;
+        }
+        if (computerChoice == 1 && userChoice == 0) {
+            System.out.println("You lose.");
+            CpuScore++;
+        }
+        if (computerChoice == 1 && userChoice == 1) {
+            System.out.println("It is a draw.");
+        }
+        if (computerChoice == 1 && userChoice == 2) {
+            System.out.println("You win.");
+            playerScore++;
+        }
+        if (computerChoice == 2 && userChoice == 0) {
+            System.out.println("You win.");
+            playerScore++;
+        }
+        if (computerChoice == 2 && userChoice == 1) {
+            System.out.println("You lose.");
+            CpuScore++;
+        }
+        if (computerChoice == 2 && userChoice == 2) {
+            System.out.println("It is a draw.");
+        }
+        rounds++;
+
+        input.nextLine();
+
+        System.out.print("Enter y to play again: ");
+        playOrNot = input.nextLine();
+
+        }while(!playOrNot.equalsIgnoreCase("n"));
+
+        System.out.println("In the total of " + rounds + " round(s), " + " You scored " + playerScore + " , Computer Scored " + CpuScore);
+        
+        
+    }
+}
