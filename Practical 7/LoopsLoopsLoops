@@ -1,0 +1,28 @@
+public class LoopsLoopsLoops {
+    public static void main(String[] args) {
+        
+        int numbers = 1;
+        int number = 50;
+        
+
+        System.out.println("Below is generated using while loop:");
+        while(numbers <= 20){
+            System.out.print(numbers + " ");
+            numbers++;
+        }
+
+        System.out.println("\nBelow is generated using do-while loop:");
+        do{
+            System.out.print(number + " ");
+            number--;
+        }while(number >= 35);
+
+        System.out.println("Below is generated using for loop:");
+        for(char letter = 'a'; letter <= 'z'; letter++){
+            System.out.print(letter + " ");
+        }
+
+
+    }
+    
+}
