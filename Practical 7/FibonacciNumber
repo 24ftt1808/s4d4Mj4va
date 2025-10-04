@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class FibonacciNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Please enter the term : ");
+        int term = input.nextInt();
+        
+        if (term < 0) {
+            System.out.println("Please enter a non-negative term.");
+        } else if (term == 0) {
+            System.out.println("At term 0 the number is 0");
+        } else if (term == 1) {
+            System.out.println("At term 1 the number is 1");
+        } else {
+            int fib0 = 0;  // F(0)
+            int fib1 = 1;  // F(1)
+            int fibCurrent = 0;
+            
+            for (int i = 2; i <= term; i++) {
+                fibCurrent = fib0 + fib1;
+                fib0 = fib1;
+                fib1 = fibCurrent;
+            }
+            
+            System.out.println("At term " + term + " the number is " + fibCurrent);
+        }
+        
+        input.close();
+    }
+}
